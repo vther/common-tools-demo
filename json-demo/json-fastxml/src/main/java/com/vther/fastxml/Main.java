@@ -1,6 +1,8 @@
 package com.vther.fastxml;
 
+import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.vther.fastxml.domain.Result;
 import com.vther.fastxml.domain.User;
 
 import java.io.File;
@@ -40,6 +42,25 @@ public class Main {
         userData.put("verified", Boolean.FALSE);
         userData.put("userImage", "Rm9vYmFyIQ==");
         mapper.writeValue(getOrCreateFileByFileName("user-modified-2.json"), userData);
+
+
+        // 3 泛型
+        Result<User> result = new Result<User>();
+        result.setCode(200);
+        result.setMsg("success");
+        result.setResultData(user);
+        String jsonGe = mapper.writeValueAsString(result);
+        System.out.println("3 - JSON带有泛型 ->" + jsonGe);
+
+        // http://kuyur.info/blog/archives/2782
+        Result<User> result2 = mapper.readValue(jsonGe, new TypeReference<Result<User>>() {});
+        System.out.println("3 - JSON带有泛型,转换回来 ->" + result2);
+        User user2 = result2.getResultData();
+        System.out.println("3 - JSON带有泛型,转换回来 ->" + user2);
+
+
+        // 4 JACKSON ANNOTATIONS http://tutorials.jenkov.com/java-json/jackson-annotations.html
+
     }
 
     private static File getOrCreateFileByFileName(String fileName) throws IOException {
