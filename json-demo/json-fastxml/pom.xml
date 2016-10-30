@@ -11,5 +11,32 @@
 
     <artifactId>json-fastxml</artifactId>
 
+    <properties>
+        <jackson.version>2.8.4</jackson.version>
+    </properties>
+
+
+    <dependencies>
+        <!-- 核心包 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+        <!-- 注解包 -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <!-- 数据绑定包,需要引用另外两个包，所以如果项目中需要jackson-databind，则只需要加入它的dependency就行了，其他两个会自动引入： -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+
+    </dependencies>
 
 </project>
