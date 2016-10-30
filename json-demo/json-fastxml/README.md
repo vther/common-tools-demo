@@ -12,16 +12,12 @@ jackson-core：核心包
 jackson-annotations：注解包
 jackson-databind：数据绑定包
 jackson-databind需要引用另外两个包，所以如果项目中需要jackson-databind，则只需要加入它的dependency就行了，其他两个会自动引入：
- <dependency>
-   <groupId>com.fasterxml.jackson.core</groupId>
-   <artifactId>jackson-databind</artifactId>
-   <version>2.5.3</version>
- </dependency>
+
 
  资源
 
- Jackson Project Home @github
- jackson-core @github
+ Jackson Project Home @github </br>
+ jackson-core @github </br>
  jackson-annotations@github | 各种annotations介绍@github
  jackson-databind@github
  FasterXML/jackson-docs@github
