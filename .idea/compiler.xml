@@ -23,11 +23,13 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="json-fastxml" />
+        <module name="time-demo" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="json-demo" target="1.5" />
       <module name="json-fastxml" target="1.5" />
+      <module name="time-demo" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

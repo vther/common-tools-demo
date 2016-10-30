@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/common-tools-demo.iml" filepath="$PROJECT_DIR$/.idea/common-tools-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/json-demo/json-demo.iml" filepath="$PROJECT_DIR$/json-demo/json-demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/json-demo/json-fastxml/json-fastxml.iml" filepath="$PROJECT_DIR$/json-demo/json-fastxml/json-fastxml.iml" />
+      <module fileurl="file://$PROJECT_DIR$/time-demo/time-demo.iml" filepath="$PROJECT_DIR$/time-demo/time-demo.iml" />
     </modules>
   </component>
 </project>
